@@ -12,6 +12,8 @@ import {
   Mail,
   Clock,
   ExternalLink,
+  Star,
+  GraduationCap,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -85,8 +87,57 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ SPECIALIST CARDS ═══ */}
+      {/* ═══ WHY CHOOSE US ═══ */}
       <section className="py-20 sm:py-28 bg-[var(--color-bg)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <div className="text-center mb-14">
+            <span className="text-[var(--color-accent)] font-semibold tracking-widest text-xs uppercase mb-2 block font-sans">
+              Hvorfor oss
+            </span>
+            <h2 className="mb-4">
+              Det som skiller oss fra andre klinikker
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: Stethoscope,
+                title: "Spesialistsenter",
+                desc: "Godkjent spesialistklinikk for smådyr. Vi tar imot henvisninger fra hele regionen.",
+              },
+              {
+                icon: Microscope,
+                title: "Avansert diagnostikk",
+                desc: "Ultralyd, EKG og fullstendig blodprøvepanel på klinikken.",
+              },
+              {
+                icon: Clock,
+                title: "Rask behandling",
+                desc: "Korte ventetider og direkte oppfølging etter utredning.",
+              },
+              {
+                icon: GraduationCap,
+                title: "Spesialiserte veterinærer",
+                desc: "Onkologi, kardiologi og generell smådyrmedisin under ett tak.",
+              },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div
+                key={title}
+                className="bg-[var(--color-surface)] dark:bg-[var(--color-surface)] border-l-4 border-[var(--color-accent)] p-6 sm:p-8 rounded-xl shadow-sm"
+              >
+                <div className="w-12 h-12 bg-[var(--color-sand)] dark:bg-[var(--color-bg)] rounded-lg flex items-center justify-center mb-5">
+                  <Icon className="h-6 w-6 text-[var(--color-primary)]" aria-hidden="true" />
+                </div>
+                <h3 className="text-lg mb-2 font-sans font-semibold">{title}</h3>
+                <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SPECIALIST CARDS ═══ */}
+      <section className="py-20 sm:py-28 bg-[var(--color-sand)] dark:bg-[var(--color-surface)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="text-center mb-14">
             <h2 className="mb-4">
@@ -103,32 +154,38 @@ export default function HomePage() {
                 icon: Microscope,
                 title: "Onkologi",
                 desc: "Marianne Mandelin er spesialist med mastergrad i onkologi. Komplett utredning inkludert tumourstaging, kirurgi og kjemoterapi.",
+                detail: "Vi tilbyr individuell behandlingsplan, inkludert palliativ omsorg og livskvalitetsvurdering.",
                 href: "/spesialist/onkologi",
               },
               {
                 icon: HeartPulse,
                 title: "Kardiologi",
                 desc: "Mai-Gret Jacobsen utfører ekkokardiografi, EKG og blodtrykksmåling. Avansert hjertediagnostikk for hund og katt.",
+                detail: "Regelmessig oppfølging, medikamentjustering og rådgivning til eier og henvisende veterinær.",
                 href: "/spesialist/kardiologi",
               },
               {
                 icon: Stethoscope,
                 title: "Indremedisin",
                 desc: "Komplekse utredninger innen gastroenterologi, endokrinologi og nefrologi med avansert bildediagnostikk.",
+                detail: "Ultralydveiledet prøvetaking og systematisk differensialdiagnostikk ved sammensatte tilstander.",
                 href: "/spesialist/indremedisin",
               },
-            ].map(({ icon: Icon, title, desc, href }) => (
+            ].map(({ icon: Icon, title, desc, detail, href }) => (
               <Link
                 key={href}
                 href={href}
-                className="group bg-[var(--color-sand)] dark:bg-[var(--color-surface)] p-8 sm:p-10 rounded-2xl flex flex-col hover:shadow-xl transition-all duration-300"
+                className="group bg-[var(--color-surface)] dark:bg-[var(--color-bg)] p-8 sm:p-10 rounded-2xl flex flex-col border border-transparent hover:border-l-4 hover:border-[var(--color-accent)] hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-14 h-14 bg-[var(--color-surface)] dark:bg-[var(--color-bg)] rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[var(--color-accent)] group-hover:text-white transition-colors">
+                <div className="w-14 h-14 bg-[var(--color-sand)] dark:bg-[var(--color-surface)] rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[var(--color-accent)] group-hover:text-white transition-colors">
                   <Icon className="h-7 w-7 text-[var(--color-primary)] group-hover:text-white" />
                 </div>
                 <h3 className="text-xl mb-3">{title}</h3>
-                <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6 flex-1">
+                <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-2 flex-1">
                   {desc}
+                </p>
+                <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6 opacity-80">
+                  {detail}
                 </p>
                 <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-semibold text-sm group-hover:gap-3 transition-all">
                   Les mer
@@ -154,6 +211,7 @@ export default function HomePage() {
               {
                 name: "Marianne J. Mandelin",
                 title: "Veterinær, Spesialist",
+                shortBio: "Spesialist i smådyronkologi",
                 subtitle:
                   "DipECVIM-CA · MS Oncology, Univ. København",
                 bio: "En av svært få onkologispesialister i Akershus/Østfold. Spesialist siden 2003 med bred erfaring innen kreft og indremedisin.",
@@ -162,6 +220,7 @@ export default function HomePage() {
               {
                 name: "Mai-Gret Jacobsen",
                 title: "Veterinær, GPCert(SAM)",
+                shortBio: "Spesialist i smådyrkardiologi",
                 subtitle: "Kardiologi · 20+ års erfaring",
                 bio: "Cand.med.vet. med fordypning i kardiologi, ultralyd, dermatologi og kirurgi. En kjent og betrodd veterinær i Son.",
                 img: "/images/staff_mai_gret_jacobsen.jpg",
@@ -169,6 +228,7 @@ export default function HomePage() {
               {
                 name: "Martine Boxill",
                 title: "Klinikkleder",
+                shortBio: "Allmennpraktiker, smådyr",
                 subtitle: "Drift og pasientkontakt",
                 bio: "Varm, rolig og strukturert. Sørger for at hverdagen flyter og at du og dyret føler dere ivaretatt fra første stund.",
                 img: "/images/staff_martine_boxill.jpg",
@@ -176,16 +236,17 @@ export default function HomePage() {
               {
                 name: "Aurora Johansen",
                 title: "Autorisert dyrepleier",
+                shortBio: "Allmennpraktiker, smådyr",
                 subtitle: "NMBU 2024",
                 bio: "Spesiell interesse for laboratoriemedisin og anestesi. Kjent for rolig håndtering, spesielt av katter.",
                 img: "/images/staff_aurora_johansen.jpg",
               },
             ].map((member) => (
-              <div key={member.name} className="group flex flex-col">
+              <div key={member.name} className="group flex flex-col border-b-2 border-transparent hover:border-[var(--color-accent)] pb-4 transition-colors duration-300">
                 <div className="aspect-[4/5] rounded-xl overflow-hidden mb-5 bg-[var(--color-sand)] shadow-sm">
                   <Image
                     src={member.img}
-                    alt={`${member.name} — ${member.title}`}
+                    alt={`${member.name}, ${member.title}`}
                     width={400}
                     height={500}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-focus-within:grayscale-0 transition-all duration-700"
@@ -194,8 +255,11 @@ export default function HomePage() {
                 <h3 className="text-lg font-semibold font-sans text-[var(--color-text)] mb-0.5">
                   {member.name}
                 </h3>
-                <p className="text-[var(--color-accent)] text-sm font-medium mb-1">
+                <p className="text-[var(--color-accent)] text-sm font-medium mb-0.5">
                   {member.title}
+                </p>
+                <p className="text-sm text-[var(--color-primary)] font-medium mb-1 font-sans">
+                  {member.shortBio}
                 </p>
                 <p className="text-xs text-[var(--color-text-muted)] mb-2 italic">
                   {member.subtitle}
@@ -203,6 +267,63 @@ export default function HomePage() {
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-3">
                   {member.bio}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ TESTIMONIALS ═══ */}
+      <section className="py-20 sm:py-28 bg-[var(--color-primary)] dark:bg-[var(--color-primary-dark)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-white mb-4">Hva våre kunder sier</h2>
+            <p className="text-white/80 max-w-xl mx-auto font-sans">
+              Tilbakemeldinger fra dyreeiere og kollegaer i regionen.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "Vi ble henvist hit for en komplisert tilstand. Teamet var grundig, rolig og dyktig. Hunden vår er frisk igjen.",
+                name: "Anne-Lise",
+                role: "Eier av Berner sennen",
+              },
+              {
+                quote: "Første gang jeg brukte en spesialistklinikk. Verdt hver krone. Diagnostikken var langt grundigere enn hos fastlegen.",
+                name: "Kjetil",
+                role: "Eier av Labrador",
+              },
+              {
+                quote: "Rask svar på henvisningen og tydelig kommunikasjon hele veien. Anbefales til alle veterinærer i regionen.",
+                name: "Veterinær",
+                role: "Østfold",
+              },
+            ].map((testimonial) => (
+              <div
+                key={testimonial.name}
+                className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8 flex flex-col"
+              >
+                <div className="flex gap-1 mb-4" aria-label="5 av 5 stjerner">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-[var(--color-accent)] fill-[var(--color-accent)]"
+                      aria-hidden="true"
+                    />
+                  ))}
+                </div>
+                <p className="text-white text-sm sm:text-base leading-relaxed mb-6 flex-1 font-sans italic">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </p>
+                <div>
+                  <p className="text-white font-semibold text-sm font-sans">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-white/60 text-sm font-sans">
+                    {testimonial.role}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

@@ -14,6 +14,9 @@ import {
   ScanSearch,
   Leaf,
   GraduationCap,
+  FileText,
+  Send,
+  ClipboardCheck,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -85,6 +88,66 @@ export default function ForVeterinaererPage() {
       </section>
 
       <Breadcrumbs items={[{ label: "For veterinærer" }]} />
+
+      {/* Referral process flow */}
+      <section className="py-20 sm:py-24 bg-[var(--color-primary)] dark:bg-[var(--color-primary-dark)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-white mb-4">Slik sender du en henvisning</h2>
+            <p className="text-white/80 max-w-xl mx-auto font-sans">
+              Fire enkle steg fra henvisning til ferdig epikrise.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                step: 1,
+                icon: FileText,
+                title: "Fyll ut henvisningsskjema",
+                desc: "Last ned eller fyll ut skjema digitalt.",
+              },
+              {
+                step: 2,
+                icon: Send,
+                title: "Send til klinikken",
+                desc: "E-post eller faks. Vi bekrefter mottak innen en arbeidsdag.",
+              },
+              {
+                step: 3,
+                icon: Phone,
+                title: "Vi kontakter eier",
+                desc: "Vi tar direkte kontakt med dyreeier for avtale.",
+              },
+              {
+                step: 4,
+                icon: ClipboardCheck,
+                title: "Epikrise tilbake til deg",
+                desc: "Fullstendig rapport sendes etter utredning.",
+              },
+            ].map(({ step, icon: Icon, title, desc }) => (
+              <div key={step} className="relative text-center">
+                <div className="flex flex-col items-center">
+                  <span
+                    className="text-4xl font-bold font-sans text-[var(--color-accent)] mb-4"
+                    aria-hidden="true"
+                  >
+                    {String(step).padStart(2, "0")}
+                  </span>
+                  <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-5 border border-white/10">
+                    <Icon className="h-7 w-7 text-white" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-lg text-white font-sans font-semibold mb-2">
+                    {title}
+                  </h3>
+                  <p className="text-white/70 text-sm leading-relaxed font-sans max-w-[240px]">
+                    {desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Specialist areas */}
       <section className="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-8">
