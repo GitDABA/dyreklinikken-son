@@ -167,8 +167,8 @@ export default function ForVeterinaererPage() {
           <div className="relative group hidden lg:block">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/staff_marianne_mandelin.jpg"
-                alt="Marianne Mandelin — spesialist i smådyrsykdommer"
+                src="/images/staff_martine_boxill.jpg"
+                alt="Martine Boxill — veterinær ved Dyreklinikken Son"
                 width={600}
                 height={750}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-focus-within:grayscale-0 transition-all duration-700"

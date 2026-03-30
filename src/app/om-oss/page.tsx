@@ -40,9 +40,9 @@ const team = [
 ];
 
 const clinicImages = [
-  { src: "/images/clinic_photo_1.jpg", alt: "Dyreklinikken Son — moderne behandlingsrom" },
-  { src: "/images/clinic_photo_2.jpg", alt: "Dyreklinikken Son — venteområde" },
-  { src: "/images/clinic_photo_3.jpg", alt: "Dyreklinikken Son — utstyr og diagnostikk" },
+  { src: "/images/clinic_interior_1.jpeg", alt: "Dyreklinikken Son — ultralyd og diagnostikk" },
+  { src: "/images/clinic_interior_2.jpeg", alt: "Dyreklinikken Son — klinikkens lokaler" },
+  { src: "/images/clinic_interior_3.jpeg", alt: "Dyreklinikken Son — kardiologiutstyr" },
   { src: "/images/recent_img_2269.jpeg", alt: "Dyreklinikken Son — nyoppussede lokaler i Slettaveien 2" },
 ];
 
