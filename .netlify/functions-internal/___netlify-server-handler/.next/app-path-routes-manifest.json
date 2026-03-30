@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/for-veterinaerer/page": "/for-veterinaerer",
+  "/kontakt/page": "/kontakt",
+  "/om-oss/page": "/om-oss",
+  "/page": "/",
+  "/preview/dyreklinikken-son/page": "/preview/dyreklinikken-son",
+  "/priser/page": "/priser",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/spesialist/indremedisin/page": "/spesialist/indremedisin",
+  "/spesialist/kardiologi/page": "/spesialist/kardiologi",
+  "/spesialist/onkologi/page": "/spesialist/onkologi",
+  "/tjenester/page": "/tjenester"
+}

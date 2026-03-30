@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/for-veterinaerer/page": "app/for-veterinaerer/page.js",
+  "/kontakt/page": "app/kontakt/page.js",
+  "/om-oss/page": "app/om-oss/page.js",
+  "/page": "app/page.js",
+  "/preview/dyreklinikken-son/page": "app/preview/dyreklinikken-son/page.js",
+  "/priser/page": "app/priser/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/spesialist/indremedisin/page": "app/spesialist/indremedisin/page.js",
+  "/spesialist/kardiologi/page": "app/spesialist/kardiologi/page.js",
+  "/spesialist/onkologi/page": "app/spesialist/onkologi/page.js",
+  "/tjenester/page": "app/tjenester/page.js"
+}

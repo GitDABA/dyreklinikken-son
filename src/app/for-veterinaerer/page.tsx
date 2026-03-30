@@ -167,11 +167,11 @@ export default function ForVeterinaererPage() {
           <div className="relative group hidden lg:block">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/staff_martine_boxill.jpg"
-                alt="Martine Boxill — veterinær ved Dyreklinikken Son"
+                src="/images/clinic_interior_1.jpeg"
+                alt="Ultralyd og diagnostikk ved Dyreklinikken Son"
                 width={600}
                 height={750}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-focus-within:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-[var(--color-accent)] text-white p-6 rounded-xl shadow-lg max-w-xs">

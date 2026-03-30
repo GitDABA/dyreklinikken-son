@@ -1,0 +1,51 @@
+{
+  "app": {
+    "[project]/src/app/_not-found/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ],
+    "[project]/src/app/for-veterinaerer/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ],
+    "[project]/src/app/kontakt/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ],
+    "[project]/src/app/om-oss/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ],
+    "[project]/src/app/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ],
+    "[project]/src/app/preview/dyreklinikken-son/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ],
+    "[project]/src/app/priser/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ],
+    "[project]/src/app/spesialist/indremedisin/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ],
+    "[project]/src/app/spesialist/kardiologi/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ],
+    "[project]/src/app/spesialist/onkologi/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ],
+    "[project]/src/app/tjenester/page": [
+      "static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+      "static/media/38df7484fe560b25-s.p.0_h8~hcb-m6kp.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
