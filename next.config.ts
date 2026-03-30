@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    formats: ["image/webp"],
-    unoptimized: false,
+    unoptimized: true,
   },
   allowedDevOrigins: ["100.68.178.26"],
 };
